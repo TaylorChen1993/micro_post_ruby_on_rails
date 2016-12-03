@@ -1,4 +1,4 @@
-拷贝项目
+---------------------------------------------------拷贝项目------------------------------------------------------------------
 1.To get started with the app,clone the repo and then install the needed gems:
 $bundle install --without production
 
@@ -13,7 +13,7 @@ $rails server
 
 
 
-开发
+----------------------------------------------------文件目录--------------------------------------------------------------
 app/ 应用的核心文件，包含模型、视图、控制器和辅助方法
 app/assets 应用的资源文件，例如层叠样式表（ CSS）、 JavaScript 和图像
 bin/ 可执行二进制文件
@@ -37,16 +37,26 @@ config.ru Rack 中间件的配置文件
 .gitignore Git 忽略的文件
 
 
-
-git push -u github
-git push -u heroku
-
-bundle exec guard#使用Guard自动测试，回车可自动运行所有测试
-
-app/helpers/application_helper.rb为辅助方法
-app/views/layouts为模板文件
+--------------------------------------------------------开发-------------------------------------------------------------------
+touch app/views/static_pages/contact.html.erb#修改文件时间戳，若不存在这个文件，则新建
+先写测试再开发(红->绿->重构)
 
 
+rails console
+rails routes#列举所有controller,method
+ApplicationController.subclasses#列举所有controller
+
+------------------------------------------------------git commit--------------------------------------------------------------------------
+bundle exec guard#使用Guard自动无限循环运行所有测试(单元测试，集成测试等)，回车继续循环自动测试,反应有些滞后，请稍等
+git add -A#先检查Guard测试是否通过，或运行rails test
+git commit#第一行输入commit标签
+git push #已默认push到github中
+git push heroku
+
+
+------------------------------------------------------git branch--------------------------------------------------------------------------
+static_pages    #ruby on rails tutorial教程中文版第三章
+bootstrap       #第五章
 
 
 
@@ -55,11 +65,7 @@ app/views/layouts为模板文件
 
 
 
-
-
-
-
-
+---------------------------------------------------------Cloud 9----------------------------------------------------------------------------
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
