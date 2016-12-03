@@ -50,6 +50,8 @@ ApplicationController.subclasses#列举所有controller
 bundle exec guard#使用Guard自动无限循环运行所有测试(单元测试，集成测试等)，回车继续循环自动测试,反应有些滞后，请稍等
 git add -A#先检查Guard测试是否通过，或运行rails test
 git commit#第一行输入commit标签
+git checkout master
+git merge anotherbranch
 git push #已默认push到github中
 git push heroku
 
