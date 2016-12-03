@@ -1,5 +1,22 @@
-git 提交历史
-Initial commit
+使用方法
+1.To get started with the app,clone the repo and then install the needed gems:
+$bundle install --without production
+
+2.Next,migrate the database:
+$rails db:migrate
+
+3.Finally,run the test suite to verify that everything is working correctly:
+$rails test
+
+4.If the test suite passes,you'll be ready to run the app in a local server:
+$rails server
+
+
+
+
+
+
+
 
 
 
