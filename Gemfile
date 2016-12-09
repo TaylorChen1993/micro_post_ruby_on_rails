@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.0.1'
-gem 'bootstrap-sass','3.3.6'
+gem 'bcrypt', '3.1.11'#对密码加密的算法
+gem 'bootstrap-sass','3.3.6'#css模板
 gem 'puma','3.4.0'
 
 # Use SCSS for stylesheets
@@ -53,15 +54,15 @@ end
 group :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'rails-controller-testing', '0.1.1'
-  gem 'minitest-reporters','1.1.9'
+  gem 'minitest-reporters','1.1.9'#使测试结果显示红色或绿色
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'guard','2.13.0'
+  gem 'guard','2.13.0'#自动测试
   gem 'guard-minitest','2.4.4'
 end
 group :production do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'pg', '0.18.4'
+  gem 'pg', '0.18.4'#postgresql
 
 end
   gem 'tzinfo-data',platforms:[:mingw,:mswin,:x64_mingw,:jruby]
