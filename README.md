@@ -1,4 +1,15 @@
----------------------------------------------------拷贝项目------------------------------------------------------------------
+---------------------------------------------------参考网站--------------------------------------------------------------------------------
+http://api.rubyonrails.org/
+http://w3school.com.cn/html/html_comments.asp
+https://github.com/TaylorChen1993/micro_post_ruby_on_rails/branches
+https://dashboard.heroku.com/apps/taylorchenmicropost/deploy/heroku-git
+https://taylorchenmicropost.herokuapp.com
+https://ide.cs50.io/ctl123/micro_post
+https://micro-post-ctl123.cs50.io/signup
+
+
+
+---------------------------------------------------拷贝项目-------------------------------------------------------------------------
 1.To get started with the app,clone the repo and then install the needed gems:
 $bundle install --without production
 
@@ -51,16 +62,22 @@ bundle exec guard#使用Guard自动无限循环运行所有测试(单元测试�
 git add -A#先检查Guard测试是否通过，或运行rails test
 git commit#第一行输入commit标签
 git checkout master
-git merge anotherbranch
+git merge anotherBranchName
 git push #已默认push到github中
 git push heroku
 
+-------------------------------------------------------git其他命令-----------------------------------------------------------------------------
+git check -b newBranchName新建分支
+git remote 查看远程仓库
+git branch 查看分支
+git log 查看提交历史
 
-------------------------------------------------------git branch--------------------------------------------------------------------------
+
+------------------------------------------------------开发的分支使用git branch查看--------------------------------------------------------------------------
 static_pages    #ruby on rails tutorial教程中文版第三章
 bootstrap       #第五章
-
-
+6-modeling-users#第六章
+7-sign-up       #第七章
 
 
 
