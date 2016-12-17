@@ -6,7 +6,7 @@ https://dashboard.heroku.com/apps/taylorchenmicropost/deploy/heroku-git
 https://taylorchenmicropost.herokuapp.com
 https://ide.cs50.io/ctl123/micro_post
 https://micro-post-ctl123.cs50.io/signup
-
+P225,7.3 节会介绍，Rails 会以这些 name 属性的值为键，用户输入的内容为值，构成一个名为 params 的哈希，用 来创建用户
 
 
 ---------------------------------------------------拷贝项目-------------------------------------------------------------------------
@@ -48,9 +48,16 @@ Rakefile 使用 rake 命令执行的实用任务
 Gemfile.lock gem 列表，确保这个应用的副本使用相同版本的 gem
 config.ru Rack 中间件的配置文件
 .gitignore Git 忽略的文件
+
+
+
 --------------------------------------------------------开发-------------------------------------------------------------------
+用户名，密码:taylorchen ctl123@yeah.net 111111
+kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法
+
 touch app/views/static_pages/contact.html.erb#修改文件时间戳，若不存在这个文件，则新建
 先写测试再开发(红->绿->重构)
+
 
 
 rails console
