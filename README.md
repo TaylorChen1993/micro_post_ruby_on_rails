@@ -1,3 +1,5 @@
+用户名taylorchen 邮箱ctl123@yeah.net 密码111111
+
 ---------------------------------------------------参考网站--------------------------------------------------------------------------------
 http://api.rubyonrails.org/
 http://w3school.com.cn/html/html_comments.asp
@@ -6,7 +8,7 @@ https://dashboard.heroku.com/apps/taylorchenmicropost/deploy/heroku-git
 https://taylorchenmicropost.herokuapp.com
 https://ide.cs50.io/ctl123/micro_post
 https://micro-post-ctl123.cs50.io/signup
-P225,7.3 节会介绍，Rails 会以这些 name 属性的值为键，用户输入的内容为值，构成一个名为 params 的哈希，用 来创建用户
+
 
 
 ---------------------------------------------------拷贝项目-------------------------------------------------------------------------
@@ -51,18 +53,9 @@ config.ru Rack 中间件的配置文件
 
 
 
---------------------------------------------------------开发-------------------------------------------------------------------
-用户名，密码:taylorchen ctl123@yeah.net 111111
-kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法
+--------------------------------------------------------开发------------------------------------------------------------------------
 
-touch app/views/static_pages/contact.html.erb#修改文件时间戳，若不存在这个文件，则新建
 先写测试再开发(红->绿->重构)
-
-
-
-rails console
-rails routes#列举所有controller,method
-ApplicationController.subclasses#列举所有controller
 
 ------------------------------------------------------git commit--------------------------------------------------------------------------
 bundle exec guard#使用Guard自动测试:在每次workspace有更改时都会自动运行所有测试(单元测试，数据模型测试，集成测试等)，反应有些滞后，请稍等,书上注释回车可执行所有test
@@ -72,6 +65,7 @@ git checkout master
 git merge anotherBranchName
 git push #已默认push到github中
 git push heroku
+
 
 -------------------------------------------------------git其他命令-----------------------------------------------------------------------------
 git check -b newBranchName新建分支
@@ -83,8 +77,25 @@ git log 查看提交历史
 ------------------------------------------------------开发的分支使用git branch查看--------------------------------------------------------------------------
 static_pages    #ruby on rails tutorial教程中文版第三章
 bootstrap       #第五章
-6-modeling-users#第六章
+6-modeling-users#第六章 
 7-sign-up       #第七章
+8-basic-login   #第八章 session
+
+--------------------------------------------------------linux命令------------------------------------------------------------------------
+kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法
+touch app/views/static_pages/contact.html.erb#修改文件时间戳，若不存在这个文件，则新建
+
+
+
+--------------------------------------------------------rails命令-------------------------------------------------------------------
+rails console
+rails routes#列举所有controller,method
+ApplicationController.subclasses#列举所有controller
+P225,7.3 节会介绍，Rails 会以这些 name 属性的值为键，用户输入的内容为值，构成一个名为 params 的哈希，用 来创建用户
+
+
+
+
 
 
 

@@ -22,6 +22,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       end
     follow_redirect!#Follow a single redirect response. If the last response was not a redirect, an exception will be raised. Otherwise, the redirect is performed on the location header.
     assert_template 'users/show'
+    assert is_logged_in? 
   end
   
   

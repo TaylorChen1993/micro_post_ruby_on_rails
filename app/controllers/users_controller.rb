@@ -14,10 +14,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params) #调用private方法
     if @user.save
       # 处理注册成功的情况
-        flash[:success] = "欢迎来到天天微博!"#修改flash数组，而在view中调用flash数组
+        log_in @user 
+        flash.now[:success] = "欢迎来到天天微博!"#修改flash数组，而在view中调用flash数组
         redirect_to @user
       else
-      render 'new'
+      render 'new'#重新打开页面
     end
   end#def end
   

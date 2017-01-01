@@ -3,7 +3,8 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <%= form_for(@user) do |f| %><!--生成表单，此方法自动使用post提交表单-->
-            <%= render 'shared/error_messages' %><!--错误消息-->
+            <%= render 'shared/error_messages' %> <!--显示错误消息-->
+           
             
             <%= f.label :name %>
             <%= f.text_field :name, class: 'form-control'  %>

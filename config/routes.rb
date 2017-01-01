@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,6 +20,11 @@ Rails.application.routes.draw do
   #----------------------------------------------------users控制器---------------------------------------------------------------------------
   resources :users
   get '/signup',to:'users#new'
+  
+  #----------------------------------------------------sessions控制器---------------------------------------------------------------------------
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   
   
   
