@@ -1,5 +1,8 @@
-用户名taylorchen 邮箱ctl123@yeah.net 密码111111
-
+---------------------------------------------------账户见seeds.rb--------------------------------------------------------------------------------
+name: "Example User",
+email: "example@railstutorial.org",
+password: "foobar",
+password_confirmation: "foobar"
 ---------------------------------------------------参考网站--------------------------------------------------------------------------------
 http://api.rubyonrails.org/
 http://w3school.com.cn/html/html_comments.asp
@@ -82,6 +85,7 @@ bootstrap       #第五章
 7-sign-up       #第七章
 8-basic-login   #第八章 session
 9-advanced-login#第九章 cookie
+10-updating-users#第十章 更新，显示和删除用户
 
 --------------------------------------------------------linux命令------------------------------------------------------------------------
 kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法

@@ -1,0 +1,15 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+<%= will_paginate %>
+<ul class="users">
+    <%= render @users %>
+    
+<!--
+<% @users.each do |user| %>
+    <%= render user %>自定寻找一个名为 _user.html.erb 的局部视图
+<% end %>
+-->
+
+</ul>
+
+<%= will_paginate %>
