@@ -61,6 +61,7 @@ config.ru Rack 中间件的配置文件
 bundle exec guard#使用Guard自动测试:在每次workspace有更改时都会自动运行所有测试(单元测试，数据模型测试，集成测试等)，反应有些滞后，请稍等,书上注释回车可执行所有test
 git add -A#先检查Guard测试是否通过，或运行rails test
 git commit#第一行输入commit标签
+或使用git commit -m "comment"
 git checkout master
 git merge anotherBranchName
 git push #已默认push到github中
@@ -80,6 +81,7 @@ bootstrap       #第五章
 6-modeling-users#第六章 
 7-sign-up       #第七章
 8-basic-login   #第八章 session
+9-advanced-login#第九章 cookie
 
 --------------------------------------------------------linux命令------------------------------------------------------------------------
 kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法
