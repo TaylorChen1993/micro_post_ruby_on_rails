@@ -3,15 +3,20 @@ class MicropostsController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
     before_action :correct_user, only: :destroy
     
+    def index
+        @microposts= Micropost.paginate(page: params[:page])#分页取回微博
+    end
+    
     def create
         @micropost = current_user.microposts.build(micropost_params)
         if @micropost.save
-            flash[:success] = "Micropost created!"
-            redirect_to root_url
+            flash[:success] = "已发布微博"
+            
             else
             @feed_items = []
-            render 'static_pages/home'
+            
         end
+        redirect_to root_url
     end
     
     def destroy

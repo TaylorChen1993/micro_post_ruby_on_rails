@@ -8,14 +8,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   #root 'welcome#index'
-  #------------------------------------------------------主页---------------------------------------------------------------------------
-  root 'static_pages#home'
+
 
   #-------------------------------------------------static_pages控制器-------------------------------------------------------------------------
-  get '/help',to:'static_pages#help'  #实现逻辑路径到物理路径的转换
-  get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
-  get '/contact', to: 'static_pages#contact'
   
   #----------------------------------------------------users控制器---------------------------------------------------------------------------
   resources :users
@@ -27,8 +23,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
   #----------------------------------------------------microposts控制器---------------------------------------------------------------------------
-  resources :microposts, only: [:create, :destroy]
-  
+  resources :microposts, only: [:index,:create, :destroy]
+  root 'microposts#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

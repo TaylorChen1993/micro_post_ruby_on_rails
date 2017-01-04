@@ -9,10 +9,17 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id])#将访问的用户
+    
     #<ActionController::Parameters {"controller"=>"users", "action"=>"show", "id"=>"1"} permitted: false>
     #debugger#若删除注释，程序在此处中断，ruby on rails tutorial中文版P214
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.paginate(page: params[:page])#将访问的用户
+    @feed_items = @user.feed.paginate(page: params[:page])
+    if logged_in? && current_user?(@user)
+    
+      @micropost = current_user.microposts.build
+      
+    end
   end
   
   def new

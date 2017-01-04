@@ -1,0 +1,13 @@
+<h1>最新微博</h1>
+<ul class="microposts">
+    <%= render @microposts %>
+    
+<!--
+<% @microposts.each do |micropost| %>
+    <%= render micropost %>自定寻找一个名为 _micropost.html.erb 的局部视图
+<% end %>
+-->
+
+</ul>
+
+<%= will_paginate %><!--分页栏-->

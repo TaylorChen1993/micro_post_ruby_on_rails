@@ -14,12 +14,11 @@ module SessionsHelper
         cookies.permanent[:remember_token] = user.remember_token 
     end
     
-    # 如果指定用户是当前用户，返回 true
+     # 如果指定用户是当前用户，返回 true
     def current_user?(user)
         user == current_user
     end
-
-    # 返回 cookie 中记忆令牌对应的用户 
+        # 返回 cookie 中记忆令牌对应的用户 
     def current_user 
         if (user_id = session[:user_id]) 
             @current_user ||= User.find_by(id: user_id) 
@@ -33,10 +32,17 @@ module SessionsHelper
         end 
     end
 
+    
+
     # 如果用户已登录，返回 true ，否则返回 false 
     def logged_in? 
         !current_user.nil? 
     end 
+
+    
+
+    
+    
     
     # 忘记持久会话
     def forget(user)
