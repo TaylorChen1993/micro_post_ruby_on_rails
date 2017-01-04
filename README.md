@@ -1,19 +1,3 @@
----------------------------------------------------账户见seeds.rb--------------------------------------------------------------------------------
-name: "Example User",
-email: "example@railstutorial.org",
-password: "foobar",
-password_confirmation: "foobar"
----------------------------------------------------参考网站--------------------------------------------------------------------------------
-http://api.rubyonrails.org/
-http://w3school.com.cn/html/html_comments.asp
-https://github.com/TaylorChen1993/micro_post_ruby_on_rails/branches
-https://dashboard.heroku.com/apps/taylorchenmicropost/deploy/heroku-git
-https://taylorchenmicropost.herokuapp.com
-https://ide.cs50.io/ctl123/micro_post
-https://micro-post-ctl123.cs50.io/signup
-
-
-
 ---------------------------------------------------拷贝项目-------------------------------------------------------------------------
 1.To get started with the app,clone the repo and then install the needed gems:
 $bundle install --without production
@@ -26,6 +10,26 @@ $rails test
 
 4.If the test suite passes,you'll be ready to run the app in a local server:
 $rails server
+
+
+---------------------------------------------------管理员账户见seeds.rb--------------------------------------------------------------------------------
+name: "Example User",
+email: "example@railstutorial.org",
+password: "foobar",
+password_confirmation: "foobar"
+
+---------------------------------------------------参考网站--------------------------------------------------------------------------------
+http://api.rubyonrails.org/
+http://w3school.com.cn/html/html_comments.asp
+https://github.com/TaylorChen1993/micro_post_ruby_on_rails/branches
+https://dashboard.heroku.com/apps/taylorchenmicropost/deploy/heroku-git
+https://taylorchenmicropost.herokuapp.com
+https://ide.cs50.io/ctl123/micro_post
+https://micro-post-ctl123.cs50.io/signup
+
+
+
+
 
 
 
@@ -59,6 +63,7 @@ config.ru Rack 中间件的配置文件
 --------------------------------------------------------开发------------------------------------------------------------------------
 
 先写测试再开发(红->绿->重构)
+debugger#添加断点
 
 ------------------------------------------------------git commit--------------------------------------------------------------------------
 bundle exec guard#使用Guard自动测试:在每次workspace有更改时都会自动运行所有测试(单元测试，数据模型测试，集成测试等)，反应有些滞后，请稍等,书上注释回车可执行所有test
@@ -86,7 +91,7 @@ bootstrap       #第五章
 8-basic-login   #第八章 session
 9-advanced-login#第九章 cookie
 10-updating-users#第十章 更新，显示和删除用户
-
+13-user-microposts#第十三章 微博
 --------------------------------------------------------linux命令------------------------------------------------------------------------
 kill 2701#A server is already running. Check /home/ubuntu/workspace/tmp/pids/server.pid解决办法
 touch app/views/static_pages/contact.html.erb#修改文件时间戳，若不存在这个文件，则新建

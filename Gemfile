@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.0.1'
 gem 'bcrypt', '3.1.11'#对密码加密的算法
 gem 'faker', '1.6.3'#在db/seeds.rb中使用半真实的名字和电子邮件地址创建示例用户
+gem 'carrierwave', '0.11.2'#微博中的图片
+gem 'mini_magick', '4.5.1'#微博中的图片
+gem 'fog', '1.38.0'#微博中的图片
 gem 'will_paginate', '3.1.0'#提供分页功能
 gem 'bootstrap-will_paginate', '0.0.10'#提供分页功能
 gem 'bootstrap-sass','3.3.6'#css模板

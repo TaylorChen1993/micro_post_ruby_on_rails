@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :microposts, dependent: :destroy
     attr_accessor :remember_token#虚拟属性，数据库中不存储
     before_save { self.email = email.downcase }
     validates :name,presence:true,length:{maximum:50},uniqueness: { case_sensitive: false }#name必须唯一，防止使用相同的头像
@@ -34,5 +35,11 @@ class User < ApplicationRecord
     def forget
         update_attribute(:remember_digest, nil)
     end 
+    
+    # 实现动态流原型
+    # 完整的实现参见第 14 章
+    def feed
+        Micropost.where("user_id = ?", id)
+    end
 
 end

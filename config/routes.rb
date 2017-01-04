@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
-  
+  #----------------------------------------------------microposts控制器---------------------------------------------------------------------------
+  resources :microposts, only: [:create, :destroy]
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

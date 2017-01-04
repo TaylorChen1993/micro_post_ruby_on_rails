@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     #<ActionController::Parameters {"controller"=>"users", "action"=>"show", "id"=>"1"} permitted: false>
     #debugger#若删除注释，程序在此处中断，ruby on rails tutorial中文版P214
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
   
   def new
@@ -59,14 +60,7 @@ class UsersController < ApplicationController
     end
     
   # 前置过滤器
-  # 确保用户已登录
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "您尚未登录"
-      redirect_to login_url
-    end
-  end
+
 
   # 确保是正确的用户
   def correct_user

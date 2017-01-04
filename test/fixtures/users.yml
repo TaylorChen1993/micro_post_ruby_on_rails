@@ -1,5 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+#注意必须有缩进，缩进必须为一个空格
   
 michael:
   name: Michael Example
